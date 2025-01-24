@@ -16,7 +16,7 @@
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                            <img class="h-8 w-8" src="https://laracasts.com/images/logo/logo-triangle.svg"
+                            <img class="h-8 w-8" src="https://thumbs.dreamstime.com/b/luxury-letter-d-logo-golden-wings-heraldic-elements-graphic-alphabet-letters-318666475.jpg"
                                  alt="Your Company">
                         </div>
                         <div class="hidden md:block">
@@ -33,6 +33,14 @@
                                 <x-nav-link href="/login" :active="request()->is('login')">Log In</x-nav-link>
                                 <x-nav-link href="/register" :active="request()->is('register')">Register</x-nav-link>
                             @endguest
+
+                            @auth
+                                    <form method="POST" action="/logout">
+                                        @csrf
+
+                                        <x-form-button>Log Out</x-form-button>
+                                    </form>
+                            @endauth
                         </div>
                     </div>
                     <div class="-mr-2 flex md:hidden">
@@ -72,12 +80,12 @@
                 <div class="border-t border-gray-700 pb-3 pt-4">
                     <div class="flex items-center px-5">
                         <div class="flex-shrink-0">
-                            <img class="h-10 w-10 rounded-full" src="https://laracasts.com/images/lary-ai-face.svg"
+                            <img class="h-10 w-10 rounded-full" src="https://static.vecteezy.com/system/resources/thumbnails/009/952/146/small/purple-lines-d-letter-logo-letter-made-of-lines-monogram-style-letter-icon-vector.jpg"
                                  alt="">
                         </div>
                         <div class="ml-3">
-                            <div class="text-base font-medium leading-none text-white">Lary Robot</div>
-                            <div class="text-sm font-medium leading-none text-gray-400">jeffrey@laracasts.com</div>
+                            <div class="text-base font-medium leading-none text-white">Danidu Pramuditha</div>
+                            <div class="text-sm font-medium leading-none text-gray-400">danidupramuditha@gmail.com</div>
                         </div>
                         <button type="button"
                                 class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
